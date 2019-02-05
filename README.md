@@ -19,10 +19,16 @@ cd react-native-boilerplate
 
 npm install
 
-react-native Start
+react-native start
 
 react-native run-android
 ```
+
+## Available UI Clones via `git checkout branchname`
+
+1. git checkout [UIClone/Instagram](https://github.com/prasanthLalapeta/react-native-boilerplate/tree/UIClone/Instagram)
+
+![Instagram UI Clone](https://raw.githubusercontent.com/prasanthLalapeta/Assets/master/react-native/Instagram-Clone.png)
 
 #### Start Server
 
