@@ -18,29 +18,17 @@ git clone https://github.com/prasanthLalapeta/react-native-boilerplate.git  
 cd react-native-boilerplate
 
 npm install
+```
 
+## Start Server
+
+Use Emulator for running project
+
+```
 react-native start
 
 react-native run-android
 ```
-
-## Available UI Clones via `git checkout branchname`
-
-1. git checkout [UIClone/Instagram](https://github.com/prasanthLalapeta/react-native-boilerplate/tree/UIClone/Instagram)
-
-![Instagram UI Clone](https://raw.githubusercontent.com/prasanthLalapeta/Assets/master/react-native/Instagram-Clone.png)
-
-#### Start Server
-
-Use Emulator for running project
-
-## Packages used for scaffolding
-- [√] react
-- [√] react-native
-- [√] react-navigation
-- [√] react-native-gesture-handler
-- [√] react-native-vector-icons
-- [√] native-base
 
 ## If compilation fails while running app for first time
 
@@ -52,5 +40,27 @@ react-native link
 ```
 
 > For using react-native-vector-icons 'copy fonts folder from node_modules/react-native-vector-icons to android/app/src/main/assets/fonts'
+
+## Packages used for scaffolding
+- [√] react
+- [√] react-native
+- [√] react-navigation
+- [√] react-native-gesture-handler
+- [√] react-native-vector-icons
+- [√] native-base
+- [√] react-native-splash-screen
+
+## Inside Box
+
+### [√] splashscreen
+
+* Replace all icon.png's inside `android/app/src/main/res/mipmap-*` with your splashimage by naming it as icon.png with various resolutions.
+* Adjust width and color of splashimage by editing `launch_screen.xml` in `android/app/src/main/res/layout`.
+
+## Available UI Clones via `git checkout branchname`
+
+1. git checkout [UIClone/Instagram](https://github.com/prasanthLalapeta/react-native-boilerplate/tree/UIClone/Instagram)
+
+![Instagram UI Clone](https://raw.githubusercontent.com/prasanthLalapeta/Assets/master/react-native/Instagram-Clone.png)
 
 Pull requests accepted with love
