@@ -1,7 +1,5 @@
 import React from 'react'
 import {
-  createSwitchNavigator,
-  createAppContainer,
   createDrawerNavigator,
   createBottomTabNavigator,
   createStackNavigator
@@ -15,12 +13,8 @@ import { DetailScreen } from '../DetailScreen';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 /**
-* - AppSwitchNavigator
-*    - AuthenticationScreen
-*    - OnboardScreen
-*    - TermsAndConditionsScreen
-*    - AppDrawerNavigator
-*          - HomeScreen - HomeScreenStackNavigator(needed for header and to change the header based on the                     tab)
+*    - HomeScreenNavigation
+*          - HomeScreen - HomeScreenStackNavigator(needed for header and to change the header based on the tab)
 *            - HomeScreenTabNavigator
 *              - Tab 1 - HomeStack
 *              - Tab 2 - FavouritesStack
@@ -85,43 +79,13 @@ const HomeScreenTabNavigator = createBottomTabNavigator(
     }
   },
   {
-    navigationOptions: ({ navigation }) => {
-      const { routeName } = navigation.state.routes[navigation.state.index];
-      return {
-        header: null,
-        headerTitle: routeName
-      };
+    tabBarOptions: {    // Navigation Options for Bottom Tab
+      showLabel: true,
+      showIcon: true
     }
   }
 );
 
-const HomeScreenStackNavigator = createStackNavigator(
-  {
-    HomeScreenTabNavigator: HomeScreenTabNavigator
-  },
-  {
-    defaultNavigationOptions: ({ navigation }) => {
-      return {
-        headerLeft: (
-          <Icon
-            style={{ paddingLeft: 10 }}
-            onPress={() => navigation.openDrawer()}
-            name="md-menu"
-            size={30}
-          />
-        ),
-        headerRight: (
-          <Icon
-            style={{ paddingRight: 10 }}
-            name="md-settings"
-            size={30}
-          />
-        )
-      };
-    }
-  }
-);
-
-export const AppDrawerNavigator = createDrawerNavigator({
-  Home: { screen: HomeScreenStackNavigator }
+export const HomeScreenNavigation = createDrawerNavigator({
+  Home: { screen: HomeScreenTabNavigator }
 });
