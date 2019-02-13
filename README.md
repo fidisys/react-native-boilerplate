@@ -57,6 +57,32 @@ react-native link
 * Replace all icon.png's inside `android/app/src/main/res/mipmap-*` with your splashimage by naming it as icon.png with various resolutions.
 * Adjust width and color of splashimage by editing `launch_screen.xml` in `android/app/src/main/res/layout`.
 
+### [√] navigations
+
+* Available navigations in this boilerplate that are required for any small and large scale apps are:
+
+```
+ - AppSwitchNavigator
+    - AuthenticationScreen
+    - OnboardScreen
+    - TermsAndConditionsScreen
+    - HomeScreenNavigation
+          - HomeScreenNavigation -
+            - HomeScreenTabNavigator
+              - Tab 1 - HomeStack
+              - Tab 2 - FavouritesStack
+              - Tab 3 - NotificationsStack
+              - Tab 4 - ProfileStack
+            - Any files you don't want to be a part of the Tab Navigator can go here.
+  ```
+
+  * Used navigations in this boilerplate are:
+
+  - [√] createSwitchNavigator
+  - [√] createBottomTabNavigator
+  - [√] createDrawerNavigator
+  - [√] createStackNavigator
+
 ## Available UI Clones via `git checkout branchname`
 
 1. git checkout [UIClone/Instagram](https://github.com/prasanthLalapeta/react-native-boilerplate/tree/UIClone/Instagram)

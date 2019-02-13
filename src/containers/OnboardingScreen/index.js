@@ -4,18 +4,14 @@ import { Icon } from 'native-base'
 import SplashScreen from 'react-native-splash-screen';
 import { styles } from './styles';
 
-export class AuthenticationScreen extends Component {
-  componentDidMount() {
-    SplashScreen.hide()
-  }
-
+export class OnboardingScreen extends Component {
   render() {
     return (
       <View style={styles.centerWrapper}>
-        <Text>Authentication Screen</Text>
+        <Text>Onboarding Screen</Text>
         <Button
-          title="Login"
-          onPress={() => this.props.navigation.navigate('Onboarding')}
+          title="Done"
+          onPress={() => this.props.navigation.navigate('TermsAndConditions')}
         />
       </View>
     );
