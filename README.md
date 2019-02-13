@@ -78,10 +78,12 @@ react-native link
 
   * Used navigations in this boilerplate are:
 
+  ```
   - [√] createSwitchNavigator
   - [√] createBottomTabNavigator
   - [√] createDrawerNavigator
   - [√] createStackNavigator
+  ```
 
 ## Available UI Clones via `git checkout branchname`
 
