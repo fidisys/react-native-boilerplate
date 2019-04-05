@@ -1,4 +1,5 @@
 // app/styles/base.js
+import { StyleSheet } from 'react-native';
 
 import {Dimensions} from 'react-native';
 
@@ -25,3 +26,13 @@ export const fonts = {
   md: 18,
   lg: 28,
 }
+
+export const general = StyleSheet.create({
+  margin: {
+    margin: 'auto',
+    padding: 5
+  },
+  flex: {
+    flex: 1
+  }
+})
