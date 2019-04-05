@@ -4,7 +4,7 @@ import {
   createAppContainer
 } from "react-navigation";
 import { HomeScreenNavigation } from './containers/HomeScreen/navigation';
-import { AuthenticationScreen } from './containers/AuthenticationScreen';
+import  AuthenticationScreen  from './containers/AuthenticationScreen';
 import { OnboardingScreen } from './containers/OnboardingScreen';
 import { TermsAndConditionsScreen } from './containers/TermsAndConditionsScreen';
 
