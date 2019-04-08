@@ -27,9 +27,9 @@ Run `npm audit fix` if needed any.
 
 ## Change Project Name or Updating react-native version
 
-- Delete `android` && `ios` folder from root directory and run `react-native eject`
+- Delete `android` && `ios` folder from root directory, update your app-name in `app.json` file and run `react-native eject`
 
->run `sudo chmod 777 android -R` if any android or ios folder got locked. Usually folder will be locked if we `sudo`
+>run `sudo chmod 777 android -R` if any android or ios folder got locked. Usually folder will be locked if we use `sudo`
 
 - then open in `android studio` to sync `gradle`
 
