@@ -1,6 +1,6 @@
 import React from 'react';
 import { createDrawerNavigator, createBottomTabNavigator, createStackNavigator } from 'react-navigation';
-import { HomeTab } from './TabNavigation/HomeTab';
+import HomeTab from './TabNavigation/HomeTab';
 import { FavouritesTab } from './TabNavigation/FavouritesTab';
 import { NotificationsTab } from './TabNavigation/NotificationsTab';
 import { ProfileTab } from './TabNavigation/ProfileTab';
