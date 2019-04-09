@@ -1,6 +1,9 @@
-import { combineReducers } from 'redux'
+import { combineReducers } from 'redux';
 import { AuthReducer } from '../containers/AuthenticationScreen/reducer';
 
-export const finalReducer = combineReducers({
-  Auth: AuthReducer
-})
+export default function finalReducer(asyncReducers) {
+	return combineReducers({
+    Auth: AuthReducer,
+		...asyncReducers,
+	});
+}

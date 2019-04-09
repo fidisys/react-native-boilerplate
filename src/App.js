@@ -4,6 +4,7 @@ import NavigationService from './services/navigationService';
 import store from './store/configureStore';
 import { Root } from 'native-base';
 import { Provider } from 'react-redux';
+import SplashScreen from 'react-native-splash-screen'
 
 class App extends Component {
 	render() {
@@ -18,6 +19,9 @@ class App extends Component {
 				</Root>
 			</Provider>
 		);
+	}
+	componentDidMount() {
+		SplashScreen.hide();
 	}
 };
 export default App;
