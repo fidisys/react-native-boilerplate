@@ -162,8 +162,14 @@ public class MainActivity extends ReactActivity {
 </resources>
 
 ```
-- Add icon.png's inside android/app/src/main/res/mipmap-* with your splashimage by naming it as icon.png with various resolutions.
-
+Customize your launch screen by creating a `launch_screen.png`-file and placing it in an appropriate `drawable`-folder. Android automatically scales drawable, so you do not necessarily need to provide images for all phone densities.
+You can create splash screens in the following folders:
+* `drawable-ldpi`
+* `drawable-mdpi`
+* `drawable-hdpi`
+* `drawable-xhdpi`
+* `drawable-xxhdpi`
+* `drawable-xxxhdpi`
 
 
 ## Start Server
@@ -192,10 +198,22 @@ react-native run-android
 
 ### [√] splashscreen
 
+**Android:**
 * Replace all icon.png's inside `android/app/src/main/res/mipmap-*` with your splashimage by naming it as icon.png with various resolutions.
 * Adjust width and color of splashimage by editing `launch_screen.xml` in `android/app/src/main/res/layout`.
 
 *To change current splash for android change all launch_screen.png in all drawable folders in android/app/src/main/res to custom png images.
+
+
+**iOS:**
+
+1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
+2. Go to `node_modules` ➜ `react-native-splash-screen` and add `SplashScreen.xcodeproj`
+3. In XCode, in the project navigator, select your project. Add `libSplashScreen.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
+4. To fix `'RNSplashScreen.h' file not found`, you have to select your project → Build Settings → Search Paths → Header Search Paths to add:
+
+   `$(SRCROOT)/../node_modules/react-native-splash-screen/ios`
+
 
 
 ### [√] navigations
