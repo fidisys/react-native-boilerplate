@@ -1,13 +1,16 @@
 // app/styles/base.js
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Platform, Dimensions } from 'react-native';
 
-import {Dimensions} from 'react-native';
 
 export const dimensions = {
   fullHeight: Dimensions.get('window').height,
   fullWidth: Dimensions.get('window').width
 }
 
+export const platform = {
+  isAndroid: Platform.OS === 'android',
+  isIos: Platform.OS === 'ios'
+}
 export const colors  = {
   primary: '#226B74',
   secondary: '#254B5A',

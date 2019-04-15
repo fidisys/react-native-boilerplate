@@ -39,48 +39,52 @@ const HomeScreenTabNavigator = createBottomTabNavigator(
 	{
 		Home: {
 			screen: HomeStack,
-			navigationOptions: ({ navigation }) => {
-				return {
-					tabBarLabel: 'Home',
-					tabBarIcon: ({ tintColor }) => <Icon name="md-home" style={{ color: tintColor }} size={25} />,
-				};
-			},
 		},
 		Favourites: {
 			screen: FavouritesTab,
-			navigationOptions: ({ navigation }) => {
-				return {
-					tabBarLabel: 'Favourites',
-					tabBarIcon: ({ tintColor }) => <Icon name="md-heart" style={{ color: tintColor }} size={25} />,
-				};
-			},
 		},
 		Notifications: {
 			screen: NotificationsTab,
-			navigationOptions: ({ navigation }) => {
-				return {
-					tabBarLabel: 'Notifications',
-					tabBarIcon: ({ tintColor }) => (
-						<Icon name="md-notifications" style={{ color: tintColor }} size={25} />
-					),
-				};
-			},
 		},
 		Profile: {
 			screen: ProfileTab,
-			navigationOptions: ({ navigation }) => {
-				return {
-					tabBarLabel: 'Profile',
-					tabBarIcon: ({ tintColor }) => <Icon name="md-person" style={{ color: tintColor }} size={25} />,
-				};
-			},
 		},
 	},
 	{
+		defaultNavigationOptions: ({ navigation }) => ({
+			tabBarIcon: ({ focused, tintColor }) => {
+				const { routeName } = navigation.state;
+				let iconName;
+				if (routeName === 'Home') {
+					iconName = `md-home`;
+				} else if (routeName === 'Favourites') {
+					iconName = `md-heart`;
+				} else if (routeName === 'Notifications') {
+					iconName = `md-notifications`;
+				} else if (routeName === 'Profile') {
+					iconName = `md-person`;
+				}
+
+				// You can return any component that you like here! We usually use an
+				// icon component from react-native-vector-icons
+				return <Icon name={iconName} size={focused ? 26 : 22} color={tintColor} />;
+			},
+			header: null,
+			tabBarLabel: navigation.state.routeName,
+			title: navigation.state.routeName,
+		}),
+		initialRouteName: 'Home',
 		tabBarOptions: {
-			// Navigation Options for Bottom Tab
-			showLabel: true,
-			showIcon: true,
+			activeTintColor: 'white',
+			labelStyle: {
+				fontSize: 12,
+				fontWeight: '400',
+				paddingBottom: 2,
+			},
+			style: {
+				backgroundColor: '#23001f',
+			},
+			inActiveTintColor: '#8e898e',
 		},
 	}
 );
@@ -91,7 +95,7 @@ export const HomeScreenNavigation = createDrawerNavigator(
 	},
 	{
 		headerMode: 'none',
-    contentComponent: SidemenuScreen,
-    drawerPosition: 'left'
+		contentComponent: SidemenuScreen,
+		drawerPosition: 'left',
 	}
 );
