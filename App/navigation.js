@@ -8,7 +8,7 @@ import {createBottomTabNavigator} from 'react-navigation-tabs';
 import LoginScreen from './containers/login/index';
 import AboutScreen from './containers/about/index';
 import ProfileScreen from './containers/profile/index';
-import Ionicons from 'react-native-vector-icons/Ionicons';
+import Icon from 'react-native-vector-icons/Ionicons';
 import {SidemenuScreen} from './containers/sideMenu/index.js';
 import {View, Text} from 'react-native';
 import NavigationAction from './utils/navigationService';
@@ -68,7 +68,7 @@ const TabBarNavigator = createBottomTabNavigator(
         // You can return any component that you like here! We usually use an
         // icon component from react-native-vector-icons
         return (
-          <Ionicons
+          <Icon
             name={iconName}
             size={focused ? 26 : 22}
             color={tintColor}
@@ -89,6 +89,7 @@ class LoadingScreen extends PureComponent {
   constructor(props) {
     super(props);
     this._bootstrap();
+    console.ignoredYellowBox = ['Warning: `-[RCTRootView cancelTouches]`'];
   }
   async _bootstrap() {
     const apiKey = await storageService.getApiKey();
