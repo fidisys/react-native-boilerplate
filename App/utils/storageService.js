@@ -14,7 +14,12 @@ const getApiKey = async () => {
   }
 };
 
+const clearApiKey = async () => {
+  await AsyncStorage.removeItem('api_key');
+}
+
 export default {
   setApiKey,
   getApiKey,
+  clearApiKey
 };

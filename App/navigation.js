@@ -1,16 +1,16 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import createAnimatedSwitchNavigator from 'react-navigation-animated-switch';
-import {Transition} from 'react-native-reanimated';
-import {createAppContainer} from 'react-navigation';
-import {createStackNavigator} from 'react-navigation-stack';
-import {createDrawerNavigator} from 'react-navigation-drawer';
-import {createBottomTabNavigator} from 'react-navigation-tabs';
+import { Transition } from 'react-native-reanimated';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+import { createDrawerNavigator } from 'react-navigation-drawer';
+import { createBottomTabNavigator } from 'react-navigation-tabs';
 import LoginScreen from './containers/login/index';
 import AboutScreen from './containers/about/index';
 import ProfileScreen from './containers/profile/index';
 import Icon from 'react-native-vector-icons/Ionicons';
-import {SidemenuScreen} from './containers/sideMenu/index.js';
-import {View, Text} from 'react-native';
+import { SidemenuScreen } from './containers/sideMenu/index.js';
+import { View, Text, Image } from 'react-native';
 import NavigationAction from './utils/navigationService';
 import storageService from './utils/storageService';
 import { FluidNavigator } from 'react-navigation-fluid-transitions';
@@ -24,9 +24,9 @@ const AboutStackNavigator = FluidNavigator(
   },
   {
     headerMode: 'none',
-    navigationOptions: ({navigation}) => {
+    navigationOptions: ({ navigation }) => {
       return {
-        tabBarVisible: navigation.state.routes.length > 1 ? false: true,
+        tabBarVisible: navigation.state.routes.length > 1 ? false : true,
       };
     }
   },
@@ -38,7 +38,7 @@ const ProfileStackNavigator = FluidNavigator(
   },
   {
     headerMode: 'none',
-    navigationOptions: ({navigation}) => {
+    navigationOptions: ({ navigation }) => {
       return {
         tabBarVisible: navigation.state.routes.length > 1 ? false : true,
       };
@@ -53,9 +53,9 @@ const TabBarNavigator = createBottomTabNavigator(
   },
   {
     initialRouteName: '',
-    defaultNavigationOptions: ({navigation}) => ({
-      tabBarIcon: ({focused, tintColor}) => {
-        const {routeName} = navigation.state;
+    defaultNavigationOptions: ({ navigation }) => ({
+      tabBarIcon: ({ focused, tintColor }) => {
+        const { routeName } = navigation.state;
         let iconName;
         if (routeName === 'about') {
           iconName = `ios-notifications`;
@@ -99,11 +99,18 @@ class LoadingScreen extends PureComponent {
     return (
       <View
         style={{
-          backgroundColor: 'red',
+          backgroundColor: 'white',
           flex: 1,
           justifyContent: 'center',
           alignItems: 'center',
         }}>
+        <Image style={{
+          width: 300,
+          height: 100,
+          resizeMode: 'cover',
+          marginBottom: 80,
+        }}
+          source={require('./assets/images/fidisys.png')}></Image>
         <Text>loading...</Text>
       </View>
     );
@@ -112,7 +119,7 @@ class LoadingScreen extends PureComponent {
 
 export const appDrawerNavigator = createDrawerNavigator(
   {
-    Home: {screen: TabBarNavigator},
+    Home: { screen: TabBarNavigator },
   },
   {
     drawerPosition: 'left',

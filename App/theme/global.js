@@ -5,7 +5,8 @@ import React from 'react';
 export const GlobalStyle = StyleSheet.create({
   mainContainer: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    height: 500
   }
 })

@@ -1,5 +1,6 @@
 import React, {PureComponent} from 'react';
 import {View, Text, Button} from 'react-native';
+import { Container, Header, Content } from '../../components/index';
 
 export default class DetailsScreens extends PureComponent {
   constructor(props) {
@@ -7,17 +8,22 @@ export default class DetailsScreens extends PureComponent {
   }
   render() {
     return (
-      <View
+      <Container
         style={{
           flex: 1,
           justifyContent: 'center',
           alignItems: 'center',
         }}>
-        <Text>Details</Text>
-        <Button
+         <Header 
+        barStyle="dark-content"
+        statusbarColor="white">
+          <Button
           onPress={() => this.props.navigation.pop()}
           title="go Back"></Button>
-      </View>
+          <Text>Details</Text>
+        </Header>
+        
+      </Container>
     );
   }
 }

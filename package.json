@@ -25,7 +25,9 @@
     "react-navigation-tabs": "^2.5.5",
     "react-redux": "^7.1.1",
     "redux": "^4.0.4",
-    "redux-devtools-extension": "^2.13.8"
+    "redux-devtools-extension": "^2.13.8",
+    "redux-saga": "^1.1.1",
+    "redux-sagas-injector": "^1.1.1"
   },
   "devDependencies": {
     "@babel/core": "7.6.3",
