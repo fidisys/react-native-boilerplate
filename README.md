@@ -112,9 +112,9 @@ ___
 ## Authors
 
 * **Justin K Xavier** - *Initial work* - [LinkedIn](https://www.linkedin.com/in/justin-k-xavier-59b82710a/)
-* **prasanth kumar lalapeta** - [Github](https://github.com/prasanthLalapeta)
+* **Prasanth Kumar Lalapeta** - [Github](https://github.com/prasanthLalapeta)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/fidisys/react-native-boilerplate/graphs/contributors) who participated in this project.
 
 ## License
 
