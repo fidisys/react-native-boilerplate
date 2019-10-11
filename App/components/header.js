@@ -3,7 +3,6 @@ import { View,StatusBar } from 'react-native';
 import { BarStyle } from '../theme/global';
 
 export const Header = ({style,statusbarColor,barStyle = BarStyle ,children}) => {
-    console.log(children)
     return (
         <View style={[{
             height: 48,

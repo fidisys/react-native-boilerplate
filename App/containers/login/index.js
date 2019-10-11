@@ -4,17 +4,20 @@ import NavigationService from '../../utils/navigationService';
 import storageService from '../../utils/storageService';
 import { connect } from 'react-redux';
 import * as loginActions from './actions';
+import { wrapTheme } from '../../theme/themeProvider';
 
-class LoginScreen extends PureComponent {
+class Login extends PureComponent {
   constructor(props) {
     super(props)
   }
   render() {
+    const { theme } = this.props;
     return (
       <View
         style={{
           flex: 1,
           padding: 30,
+          backgroundColor: theme.backgroundColor,
           justifyContent: 'space-evenly',
           alignItems: 'center',
         }}>
@@ -44,6 +47,7 @@ const mapDispatchToProps = dispatch => {
 	};
 };
 
+const LoginScreen = wrapTheme(Login)
 export default connect(
 	mapStateToProps,
 	mapDispatchToProps
