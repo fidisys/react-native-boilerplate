@@ -1,8 +1,17 @@
 import { Container } from './container';
-import { Header } from './header';
-import { Content } from './content'
+import { Header,HeaderBody,HeaderRight,HeaderLeft } from './header';
+import { Content } from './content';
+import { IconButton } from './iconButton';
+import { Button } from './button';
+import { Footer } from './footer';
 export {
     Container,
     Header,
-    Content
+    HeaderBody,
+    HeaderRight,
+    HeaderLeft,
+    Content,
+    Button,
+    Footer,
+    IconButton
 }

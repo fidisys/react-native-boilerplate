@@ -8,6 +8,7 @@ import NavigationService from '../../utils/navigationService';
 export function* watcherSaga() {
   yield all([
     takeLatest(loginTypes.LOGIN, loginSagas),
+    takeLatest(loginTypes.LOGOUT, logoutSagas)
   ]);
 }
 login = async (token) => {
@@ -22,5 +23,19 @@ function* loginSagas(data) {
 
   } catch (error) {
     yield put(loginActions.loginError)
+  }
+}
+
+logout = () => {
+  storageService.clearApiKey();
+  NavigationService.navigate('Authentication')
+}
+
+function* logoutSagas() {
+  try {
+    yield call(logout);
+    yield put(loginActions.LogOutSuccess())
+  } catch (error) {
+    
   }
 }

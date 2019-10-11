@@ -1,16 +1,20 @@
 import React from 'react';
-import { View,ScrollView } from 'react-native';
+import { View, } from 'react-native';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
 
 export const Content = ({style,children}) => {
     return (
-        <ScrollView 
+        <KeyboardAwareScrollView 
+        automaticallyAdjustContentInsets={false}
+        style={{flex: 1}}
         showsVerticalScrollIndicator
         contentContainerStyle={[{
-            padding: 10
+            padding: 15,
+            flexDirection: 'column'
         },style]}>
             {children}
-        </ScrollView>
+        </KeyboardAwareScrollView>
 
     )
 }

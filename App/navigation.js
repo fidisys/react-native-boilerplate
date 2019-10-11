@@ -17,7 +17,7 @@ import { FluidNavigator } from 'react-navigation-fluid-transitions';
 import DetailsScreens from './containers/details/index'
 
 
-const AboutStackNavigator = FluidNavigator(
+const AboutStackNavigator = createStackNavigator(
   {
     about: AboutScreen,
     details: DetailsScreens,
@@ -32,7 +32,7 @@ const AboutStackNavigator = FluidNavigator(
   },
 );
 
-const ProfileStackNavigator = FluidNavigator(
+const ProfileStackNavigator = createStackNavigator(
   {
     profile: ProfileScreen,
   },
@@ -80,7 +80,9 @@ const TabBarNavigator = createBottomTabNavigator(
       title: navigation.state.routeName,
     }),
     tabBarOptions: {
-      activeTintColor: 'red'
+      activeTintColor: 'white',
+      activeBackgroundColor: '#3c414f',
+      inactiveBackgroundColor: '#3c414f'
     }
   },
 );
