@@ -3,7 +3,7 @@
 <br />
 
 <div align="center"><strong>Start Your Next React Native Project In Seconds</strong></div>
-<div align="center">A highly scalable, redux state management, sagas middleware integrated setup focus on performance and best practices</div>
+<div align="center">A highly scalable, redux state management, sagas middleware, Dark/Light theme mode integrated setup focus on performance and best practices</div>
 
 <br />
 
@@ -33,7 +33,7 @@
 
 # React Native Boilerplate
 
-React Native boilerplate using react-native-cli with react-navigation, redux state management, redux-saga middleware and auth flow mechanism with drawer-tab navigation layout.
+React Native boilerplate using react-native-cli with react-navigation, redux state management, redux-saga middleware and auth flow mechanism with drawer-tab navigation layout. Dark & Light theme switch mechanism using react context and useState Hooks.
 
 
 ## Prerequisites
@@ -83,7 +83,7 @@ react-native run <android/ios>
 -  redux
 -  react-redux
 -  redux-saga
-
+-  React Hooks
 
 ### React-Native Debugger
 ![React Native Debugger](https://user-images.githubusercontent.com/3001525/29451479-6621bf1a-83c8-11e7-8ebb-b4e98b1af91c.png)
