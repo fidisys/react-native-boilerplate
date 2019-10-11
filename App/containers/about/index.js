@@ -6,10 +6,14 @@ import {
   HeaderRight,
   HeaderLeft, Button
 } from '../../components/index';
+import { wrapTheme } from '../../theme/themeProvider';
 
-export default class AboutScreen extends PureComponent {
-
+class About extends PureComponent {
+  constructor(props) {
+    super(props)
+  }
   render() {
+    const { theme } = this.props;
     const images = [
       'https://cdn.dribbble.com/users/4103091/screenshots/7353178/media/6d1a3a06961c0dcfd513ffe241636472.png',
       'https://cdn.dribbble.com/users/4103091/screenshots/7154300/media/7839c89716a90284e0c52595efb61dd5.jpg',
@@ -30,7 +34,9 @@ export default class AboutScreen extends PureComponent {
           </HeaderBody>
           <HeaderRight />
         </Header>
-        <Content>
+        <Content style={{
+          backgroundColor: theme.backgroundColor
+        }}>
           <View style={{
             flexDirection: 'column',
             width: '100%',
@@ -38,7 +44,7 @@ export default class AboutScreen extends PureComponent {
             alignItems: 'center',
             marginBottom: 30,
           }}>
-            <Text style={style.title}>About Screen</Text>
+            <Text style={[style.title,{color: theme.color}]}>About Screen</Text>
 
             <Button
               style={{ backgroundColor: 'green' }}
@@ -62,6 +68,8 @@ export default class AboutScreen extends PureComponent {
     );
   }
 }
+
+export default AboutScreen = wrapTheme(About);
 
 const style = StyleSheet.create({
   title: {

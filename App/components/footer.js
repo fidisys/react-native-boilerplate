@@ -15,7 +15,7 @@ export const Footer = ({ style, children }) => {
                 flexDirection: 'row',
                 justifyContent: 'center',
                 alignItems: 'center',
-                backgroundColor: 'transparent'
+                backgroundColor: 'white'
             }, style]}>
             {children}
         </View>

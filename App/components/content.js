@@ -7,10 +7,10 @@ export const Content = ({style,children}) => {
     return (
         <KeyboardAwareScrollView 
         automaticallyAdjustContentInsets={false}
-        style={{flex: 1}}
         showsVerticalScrollIndicator
         contentContainerStyle={[{
             padding: 15,
+            height:'100%',
             flexDirection: 'column'
         },style]}>
             {children}

@@ -14,6 +14,19 @@ const getApiKey = async () => {
   }
 };
 
+const setThemeId = id =>{
+  AsyncStorage.setItem('theme_id', id);
+}
+
+const getThemeId = async () => {
+  try {
+    const themeId = await AsyncStorage.getItem('theme_id');
+    return themeId;
+  } catch (error) {
+    return error;
+  }
+};
+
 const clearApiKey = async () => {
   await AsyncStorage.removeItem('api_key');
 }
@@ -21,5 +34,7 @@ const clearApiKey = async () => {
 export default {
   setApiKey,
   getApiKey,
-  clearApiKey
+  clearApiKey,
+  setThemeId,
+  getThemeId
 };
