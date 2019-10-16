@@ -7,7 +7,9 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "setup-pre-commit-linting": "git config core.hooksPath .githooks",
+    "postinstall": "npm run setup-pre-commit-linting"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.6.2",
