@@ -56,6 +56,12 @@ ___
 ```
 git clone https://github.com/fidisys/react-native-boilerplate.git
 ```
+or:
+
+```
+npx degit fidisys/react-native-boilerplate
+```
+
 2. Install all the dependencies
 And repeat
 
